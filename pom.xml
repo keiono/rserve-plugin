@@ -73,7 +73,7 @@
 						<Export-Package>${bundle.namespace},!${bundle.namespace}.*</Export-Package>
 						<Private-Package>${bundle.namespace}.*</Private-Package>
 						<Bundle-Activator>${bundle.namespace}.internal.CyActivator</Bundle-Activator>
-						<Embed-Dependency>*;scope=!provided</Embed-Dependency>
+						<Embed-Dependency>*;scope=!provided;scope=!test</Embed-Dependency>
 						<Embed-Transitive>true</Embed-Transitive>
 					</instructions>
 				</configuration>
@@ -109,6 +109,14 @@
 			<artifactId>service-api</artifactId>
 			<version>${cytoscape.api.version}</version>
 			<scope>provided</scope>
+		</dependency>
+
+		<!-- Test dependencies -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
 		</dependency>
 
 
